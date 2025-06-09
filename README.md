@@ -10,7 +10,24 @@ This project investigates whether machine-generated text can be distinguished fr
 
 ## Project Objective
 
-Large language models (LLMs) are capable of producing human-like text, but their outputs still exhibit detectable patterns. This project tests the hypothesis that structural linguistic cues — such as part-of-speech tags, clause types, and syntax density — can help distinguish LLM-generated from human-written text.
+Large language models (LLMs) can produce human-like text, but subtle linguistic patterns remain. This project tests whether structural linguistic cues—like clause type and syntactic density—can distinguish LLM-generated from human-written text.
+
+---
+
+## Problem & Findings
+
+**Problem**
+
+As LLMs become widespread, distinguishing machine- from human-written text is essential for academic integrity, authorship verification, and trust online. Most existing detectors rely on model-specific signals, which are hard to generalize across architectures.
+
+**Findings**
+
+This project demonstrates that classic ML models trained on linguistic features can reliably classify LLM-generated text:
+
+- XGBoost reached 70.65% test accuracy across 7 LLM sources
+- Predictive features include clause complexity, “that” clause frequency, and type-token ratio
+- GPT-4 and human texts showed strong separability; LLaMA variants were harder to differentiate
+- The feature-based approach is interpretable and architecture-agnostic, offering a robust alternative to black-box detection
 
 ---
 
@@ -31,16 +48,6 @@ detect-llm-generated-text/
 3. **Dimensionality Reduction**: PCA + t-SNE for 2D visualization
 4. **Modeling**: Trained Random Forest, XGBoost, and MLP classifiers
 5. **Evaluation**: Visual and quantitative results confirm high classification accuracy
-
----
-
-## Results
-
-- **XGBoost Accuracy**: 70.65%, **Stacked Ensemble (XGB + RF) Accuracy**: 70.29%
-- Feature importance highlights structural indicators like participle use, type-token ratio, and “that” clauses
-- Clear separation observed for GPT-4 variants and human-written texts
-- Significant overlap among similar LLMs (e.g., LLaMA variants), illustrating challenges of intra-family detection
-
 
 ---
 
