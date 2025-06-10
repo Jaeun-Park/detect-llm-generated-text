@@ -24,9 +24,7 @@ The original paper examined variation in grammatical and rhetorical features bet
 
 This project replicates that framework using open-access data and contributes additional insights by:
 - Validates the framework using open-access data  
-- Tests multiple LLM families (GPT, LLaMA, Mistral)  
 - Evaluates new classifiers (XGBoost, MLP)  
-- Assesses generalization across text genres  
 - Visualizes feature boundaries via PCA and t-SNE
 
 These results support the robustness of feature-based detection and demonstrate how interpretable models can serve as architecture-agnostic tools for identifying LLM-generated content.
@@ -42,7 +40,7 @@ As LLMs become widespread, distinguishing machine- from human-written text is es
 **Findings**
 
 - XGBoost achieved 70.65% test accuracy across 7 LLM sources
-- Most predictive features: clause complexity, “that” clause frequency, type-token ratio
+- Most predictive features: Present participial clauses, “that” clause frequency
 - GPT-4 vs. human texts were easier to separate; LLaMA variants were more challenging
 - Linguistic-feature-based models offer a transparent, generalizable alternative to proprietary detectors
 
