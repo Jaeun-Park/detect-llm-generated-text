@@ -18,16 +18,16 @@ Can LLM-generated text be distinguished from human writing using linguistic stru
 
 This project builds on and extends experiments from:
 
-Park, J., & Choi, Y. (2024). Detecting AI-Generated Text with Human-Like Linguistic Features. arXiv:2410.16107
+Reinhart, A., Brown, D. W., Markey, B., Laudenbach, M., Pantusen, K., Yurko, R., & Weinberg, G. (2024). Do LLMs Write Like Humans? Variation in Grammatical and Rhetorical Styles. arXiv:2410.16107.
 
-The original work proposed that features such as clause complexity, syntactic density, and function word ratios could effectively differentiate AI- from human-generated text.
+The original paper examined variation in grammatical and rhetorical features between LLM- and human-written texts using linguistic analysis.
 
-This project:
-- Reproduces the core findings using open-access data
-- Validates across multiple LLM families (GPT, LLaMA, Mistral)
-- Tests new classifiers (XGBoost, MLP)
-- Explores genre generalization
-- Visualizes boundaries via PCA and t-SNE
+This project replicates that framework using open-access data and contributes additional insights by:
+- Validates the framework using open-access data  
+- Tests multiple LLM families (GPT, LLaMA, Mistral)  
+- Evaluates new classifiers (XGBoost, MLP)  
+- Assesses generalization across text genres  
+- Visualizes feature boundaries via PCA and t-SNE
 
 These results support the robustness of feature-based detection and demonstrate how interpretable models can serve as architecture-agnostic tools for identifying LLM-generated content.
 
@@ -88,7 +88,7 @@ pip install -r requirements.txt
 
 ## Key References
 
-- Park, J., & Choi, Y. (2024). [Detecting AI-Generated Text with Human-Like Linguistic Features](https://arxiv.org/abs/2410.16107)
+- Reinhart, A., Brown, D. W., Markey, B., Laudenbach, M., Pantusen, K., Yurko, R., & Weinberg, G. (2024). [Do LLMs Write Like Humans? Variation in Grammatical and Rhetorical Styles](https://arxiv.org/abs/2410.16107)
 - [Human-AI Parallel Corpus – HuggingFace](https://huggingface.co/datasets/browndw/human-ai-parallel-corpus)
 - [Corpus of Contemporary American English (COCA)](https://www.english-corpora.org/coca/)
 
